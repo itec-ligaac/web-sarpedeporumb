@@ -3,17 +3,19 @@
     <div class="top-bar" data-topbar role="navigation">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text"><strong>SARPE TRAVEL</strong></li>
+          <li class="menu-text">
+            <label>
+              <strong id="logo"><router-link to="/">SARPE TRAVEL</router-link></strong>
+            </label></li>
         </ul>
       </div>
       <ul class="dropdown menu" data-dropdown-menu>
         <li>
-          <a href="#">Item 1</a>
+          <i class="fi-list" style="font-size:2.3em; margin-right:0.5em;"></i>
           <ul class="menu">
-            <li><a href="#">Item 1A</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-            <li><a href="#">Item 4</a></li>
+            <li><a href="#"></a></li>
+            <li><router-link to="profile">Profile</router-link></li>
+            <li><a>Log Out</a></li>
           </ul>
         </li>
       </ul>
@@ -21,12 +23,30 @@
     <router-view/>
   </div>
 </template>
-
 <style lang="scss">
 @import "app";
 @import "./assets/flex.scss";
+@import "assets/foundation-icons/foundation-icons.css";
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+#logo {
+  font-family: 'Gloria Hallelujah';
+  font-size-adjust: 1.1;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+      -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  border-radius: 0.4em;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+#logo:hover {
+  background-color: lighten($color: map-get($foundation-palette, hilight), $amount: 10%);
+}
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
