@@ -8,8 +8,8 @@ const Question = require('../models/question.model');
  */
 exports.load = async (req, res, next, id) => {
   try {
-    const user = await Question.get(id);
-    req.locals = { user };
+    const question = await Question.get(id);
+    req.locals = { question };
     return next();
   } catch (error) {
     return next(error);
@@ -20,13 +20,7 @@ exports.load = async (req, res, next, id) => {
  * Get question
  * @public
  */
-exports.get = (req, res) => res.json(req.locals.user.transform());
-
-/**
- * Get logged in question info
- * @public
- */
-exports.loggedIn = (req, res) => res.json(req.user.transform());
+exports.get = (req, res) => res.json(req.locals.question.transform());
 
 /**
  * Create new question
@@ -68,7 +62,7 @@ exports.replace = async (req, res, next) => {
  */
 exports.update = (req, res, next) => {
   const updatedQuestion = omit(req.body);
-  const question = Object.assign(req.locals.user, updatedQuestion);
+  const question = Object.assign(req.locals.question, updatedQuestion);
 
   question.save()
     .then(savedQuestion => res.json(savedQuestion.transform()))
