@@ -32,10 +32,12 @@ jobs:
       - name: frontend tests
         run: |
           cd sarpedeporumb-frontend/
+          yarn install
           yarn run lint
           yarn run test:unit
       - name: backend tests
         run: |
           cd backend
+          yarn install
           yarn run test
           
