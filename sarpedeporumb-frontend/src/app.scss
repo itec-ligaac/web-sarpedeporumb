@@ -3,6 +3,8 @@
 @include motion-ui-animations;
 // Load Foundation
 @import "~foundation-sites/scss/foundation";
+//Loar custom font
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 // Load custom Foundation variables
 @import "./settings";
 @include foundation-everything;
