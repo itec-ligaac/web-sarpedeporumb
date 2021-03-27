@@ -1,32 +1,76 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+
+    <div class="top-nav-bar-wrapper">
+      <div class="top-nav-bar">
+        <p class="top-nav-bar-title">SARPE TRAVEL</p>
+        <div class="top-nav-bar-links">
+        </div>
+      </div>
     </div>
     <router-view/>
+    <footer id="footer">
+      <div>
+        <router-link class="credits" to="/">
+          SARPE TRAVEL 2021
+        </router-link>
+      </div>
+    </footer>
+
   </div>
 </template>
 
 <style lang="scss">
+@import "app";
+@import "./assets/flex.scss";
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background-color: chartreuse;
 }
 
-#nav {
-  padding: 30px;
+.top-nav-bar-wrapper{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background: $black;
+  .top-nav-bar{
+    height: 60px;
+    width: 100%;
+    max-width: 1620px;
+    margin: 0 auto;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    @include flexbox();
+    @include justify-content(center);
+    @include flex-direction(column);
+    .top-nav-bar-title{
+      color: $white;
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size: 35px;
+      margin: auto auto;
     }
   }
 }
+
+  #footer{
+    width: 100%;
+    background-color: $black;
+    overflow-y: hidden;
+    @include flexbox();
+    @include justify-content(space-between);
+    @include flex-direction(row);
+    font-family: 'Karla', sans-serif;
+    .credits{
+      color: $white;
+      align-self: center;
+      text-align: left;
+      padding: 20px;
+
+    }
+  }
 </style>

@@ -1,0 +1,8 @@
+@import "~motion-ui/src/motion-ui.scss";
+@include motion-ui-transitions;
+@include motion-ui-animations;
+// Load Foundation
+@import "~foundation-sites/scss/foundation";
+// Load custom Foundation variables
+@import "./settings";
+@include foundation-everything;
