@@ -35,6 +35,10 @@ jobs:
           yarn install
           yarn run lint
           yarn run test:unit
+        
+      - name: MongoDB in GitHub Actions
+        uses: supercharge/mongodb-github-action@1.3.0
+          
       - name: backend tests
         run: |
           cd backend
