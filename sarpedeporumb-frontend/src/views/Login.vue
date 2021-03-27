@@ -1,11 +1,6 @@
 <template>
-<div class="grid-y">
-  <div class="cell large-auto">One</div>
-  <div class="cell large-auto">Two</div>
-  <div class="cell large-auto">Three</div>
-  <div class="cell large-auto">Four</div>
-  <div class="cell large-auto">Five</div>
-  <div class="cell large-auto">Six</div>
+<div>
+  <login-form></login-form>
 </div>
 </template>
 
@@ -14,6 +9,7 @@
 import loginForm from '../components/loginForm.vue';
 
 export default {
+  components: { loginForm },
   name: 'Home',
   comments: {
     loginForm,
