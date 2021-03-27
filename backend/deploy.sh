@@ -1,12 +1,12 @@
 #!/bin/bash
-docker build -t danielfsousa/express-rest-es2017-boilerplate .
-docker push danielfsousa/express-rest-es2017-boilerplate
+sudo docker build -t womywomwoo/sarpe-travel .
+sudo docker push womywomwoo/sarpe-travel:latest
 
-ssh deploy@$DEPLOY_SERVER << EOF
-docker pull danielfsousa/express-rest-es2017-boilerplate
-docker stop api-boilerplate || true
-docker rm api-boilerplate || true
-docker rmi danielfsousa/express-rest-es2017-boilerplate:current || true
-docker tag danielfsousa/express-rest-es2017-boilerplate:latest danielfsousa/express-rest-es2017-boilerplate:current
-docker run -d --restart always --name api-boilerplate -p 3000:3000 danielfsousa/express-rest-es2017-boilerplate:current
+ssh womywomwoo@dev.womywomwoo.com << EOF
+sudo docker pull womywomwoo/sarpe-travel:latest
+sudo docker stop api-sarpetravel || true
+sudo docker rm api-sarpetravel || true
+sudo docker rmi womywomwoo/sarpe-travel:current || true
+sudo docker tag womywomwoo/sarpe-travel:latest womywomwoo/sarpe-travel:current
+sudo docker run -d --restart always --name api-sarpetravel -p 443:3000 womywomwoo/sarpe-travel:current
 EOF

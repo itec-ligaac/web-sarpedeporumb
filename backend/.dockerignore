@@ -3,6 +3,8 @@ node_modules/
 .vscode/
 coverage/
 
+scripts/covid-19-data
+
 .dockerignore
 Dockerfile
 
