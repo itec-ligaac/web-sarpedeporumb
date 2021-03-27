@@ -1,8 +1,8 @@
 <template>
   <form class="log-in-form">
-    <h4 class="text-center">Log in with you email account</h4>
+    <h3 class="text-center">Log in with you email account</h3>
     <label>Email
-      <input type="email" placeholder="somebody@example.com">
+      <input type="email" placeholder="me@sarpe.xyz">
     </label>
     <label>Password
       <input type="password" placeholder="Password">
