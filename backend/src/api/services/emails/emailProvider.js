@@ -28,7 +28,7 @@ exports.sendPasswordReset = async (passwordResetObject) => {
   const email = new Email({
     views: { root: __dirname },
     message: {
-      from: 'support@your-app.com',
+      from: 'support@sarpe.xyz',
     },
     // uncomment below to send emails in development/test env:
     send: true,
@@ -45,7 +45,7 @@ exports.sendPasswordReset = async (passwordResetObject) => {
         productName: 'Test App',
         // passwordResetUrl should be a URL to your app that displays a view where they
         // can enter a new password along with passing the resetToken in the params
-        passwordResetUrl: `https://your-app/new-password/view?resetToken=${passwordResetObject.resetToken}`,
+        passwordResetUrl: `https://sarpe.xyz/new-password/view?resetToken=${passwordResetObject.resetToken}`,
       },
     })
     .catch(() => console.log('error sending password reset email'));
@@ -55,7 +55,7 @@ exports.sendPasswordChangeEmail = async (user) => {
   const email = new Email({
     views: { root: __dirname },
     message: {
-      from: 'support@your-app.com',
+      from: 'support@sarpe.xyz',
     },
     // uncomment below to send emails in development/test env:
     send: true,
