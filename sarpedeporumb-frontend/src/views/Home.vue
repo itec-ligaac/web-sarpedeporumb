@@ -31,7 +31,7 @@ export default {
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: $white;
+  background: $medium-gray;
   top: 0;
   .home-page-content{
     width: 100%;
@@ -57,9 +57,9 @@ export default {
       h1{
         text-align: center;
         font-family: 'Karla', sans-serif;
-        font-size: 50px;
-        width: 350px;
-        margin: 20px auto;
+        // font-size: 50px;
+        // width: 350px;
+        // margin: 20px auto;
       }
       .button-start{
         border: 0;
@@ -89,7 +89,7 @@ export default {
 
     .jumbo-image{
       height: auto;
-      width: 400px;
+      width: 50em;
       margin: 0 auto;
     }
   }
