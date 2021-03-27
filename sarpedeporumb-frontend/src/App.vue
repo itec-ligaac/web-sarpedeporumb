@@ -1,46 +1,24 @@
 <template>
-  <div id="app">
-
-<nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">
-      <h1><a href="#">My Site</a></h1>
-    </li>
-     <!-- Remove the class "menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#">
-      <span>Menu</span></a>
-    </li>
-  </ul>
-
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li class="active"><a href="#">Right Button Active</a></li>
-      <li class="has-dropdown">
-        <a href="#">Right Button Dropdown</a>
-        <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
-          <li class="active"><a href="#">Active link in dropdown</a></li>
+  <div id="app" class="owa">
+    <div class="top-bar" data-topbar role="navigation">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text"><strong>SARPE TRAVEL</strong></li>
         </ul>
-      </li>
-    </ul>
-
-    <!-- Left Nav Section -->
-    <ul class="left">
-      <li><a href="#">Left Nav Button</a></li>
-    </ul>
-  </section>
-</nav>
-
-    <router-view/>
-    <footer id="footer">
-      <div>
-        <router-link class="credits" to="/">
-          SARPE TRAVEL 2021
-        </router-link>
       </div>
-    </footer>
-
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li>
+          <a href="#">Item 1</a>
+          <ul class="menu">
+            <li><a href="#">Item 1A</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <router-view/>
   </div>
 </template>
 
@@ -52,7 +30,6 @@
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: chartreuse;
 }
 
 .top-nav-bar-wrapper{
