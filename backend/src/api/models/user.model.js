@@ -51,6 +51,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
+  geoloc: {
+    type: Object,
+  },
 }, {
   timestamps: true,
 });
@@ -82,7 +85,7 @@ userSchema.pre('save', async function save(next) {
 userSchema.method({
   transform() {
     const transformed = {};
-    const fields = ['id', 'name', 'email', 'picture', 'role', 'createdAt'];
+    const fields = ['id', 'name', 'email', 'picture', 'role', 'geoloc', 'createdAt'];
 
     fields.forEach((field) => {
       transformed[field] = this[field];

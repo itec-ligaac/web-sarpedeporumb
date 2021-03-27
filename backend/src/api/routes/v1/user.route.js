@@ -56,11 +56,12 @@ router
    * @apiParam  {String{..128}}      [name]    User's name
    * @apiParam  {String=user,admin}  [role]    User's role
    *
-   * @apiSuccess (Created 201) {String}  id         User's id
-   * @apiSuccess (Created 201) {String}  name       User's name
-   * @apiSuccess (Created 201) {String}  email      User's email
-   * @apiSuccess (Created 201) {String}  role       User's role
-   * @apiSuccess (Created 201) {Date}    createdAt  Timestamp
+   * @apiSuccess (Created 201) {String}      id         User's id
+   * @apiSuccess (Created 201) {String}      name       User's name
+   * @apiSuccess (Created 201) {String}      email      User's email
+   * @apiSuccess (Created 201) {String}      role       User's role
+   * @apiSuccess (Created 201) {GeoLocation} geoloc     User's geoloc
+   * @apiSuccess (Created 201) {Date}        createdAt  Timestamp
    *
    * @apiError (Bad Request 400)   ValidationError  Some parameters may contain invalid values
    * @apiError (Unauthorized 401)  Unauthorized     Only authenticated users can create the data
@@ -81,11 +82,12 @@ router
    *
    * @apiHeader {String} Authorization   User's access token
    *
-   * @apiSuccess {String}  id         User's id
-   * @apiSuccess {String}  name       User's name
-   * @apiSuccess {String}  email      User's email
-   * @apiSuccess {String}  role       User's role
-   * @apiSuccess {Date}    createdAt  Timestamp
+   * @apiSuccess {String}      id         User's id
+   * @apiSuccess {String}      name       User's name
+   * @apiSuccess {String}      email      User's email
+   * @apiSuccess {String}      role       User's role
+   * @apiSuccess {GeoLocation} geoloc     User's geoloc
+   * @apiSuccess {Date}        createdAt  Timestamp
    *
    * @apiError (Unauthorized 401)  Unauthorized  Only authenticated Users can access the data
    */
@@ -104,11 +106,12 @@ router
    *
    * @apiHeader {String} Authorization   User's access token
    *
-   * @apiSuccess {String}  id         User's id
-   * @apiSuccess {String}  name       User's name
-   * @apiSuccess {String}  email      User's email
-   * @apiSuccess {String}  role       User's role
-   * @apiSuccess {Date}    createdAt  Timestamp
+   * @apiSuccess {String}      id         User's id
+   * @apiSuccess {String}      name       User's name
+   * @apiSuccess {String}      email      User's email
+   * @apiSuccess {String}      role       User's role
+   * @apiSuccess {GeoLocation} geoloc     User's geoloc
+   * @apiSuccess {Date}        createdAt  Timestamp
    *
    * @apiError (Unauthorized 401) Unauthorized Only authenticated users can access the data
    * @apiError (Forbidden 403)    Forbidden    Only user with same id or admins can access the data
@@ -131,11 +134,12 @@ router
    * @apiParam  {String=user,admin}  [role]    User's role
    * (You must be an admin to change the user's role)
    *
-   * @apiSuccess {String}  id         User's id
-   * @apiSuccess {String}  name       User's name
-   * @apiSuccess {String}  email      User's email
-   * @apiSuccess {String}  role       User's role
-   * @apiSuccess {Date}    createdAt  Timestamp
+   * @apiSuccess {String}      id         User's id
+   * @apiSuccess {String}      name       User's name
+   * @apiSuccess {String}      email      User's email
+   * @apiSuccess {String}      role       User's role
+   * @apiSuccess {GeoLocation} geoloc     User's geoloc
+   * @apiSuccess {Date}        createdAt  Timestamp
    *
    * @apiError (Bad Request 400)  ValidationError  Some parameters may contain invalid values
    * @apiError (Unauthorized 401) Unauthorized Only authenticated users can modify the data
@@ -159,11 +163,12 @@ router
    * @apiParam  {String=user,admin}  [role]    User's role
    * (You must be an admin to change the user's role)
    *
-   * @apiSuccess {String}  id         User's id
-   * @apiSuccess {String}  name       User's name
-   * @apiSuccess {String}  email      User's email
-   * @apiSuccess {String}  role       User's role
-   * @apiSuccess {Date}    createdAt  Timestamp
+   * @apiSuccess {String}      id         User's id
+   * @apiSuccess {String}      name       User's name
+   * @apiSuccess {String}      email      User's email
+   * @apiSuccess {String}      role       User's role
+   * @apiSuccess {GeoLocation} geoloc     User's geoloc
+   * @apiSuccess {Date}        createdAt  Timestamp
    *
    * @apiError (Bad Request 400)  ValidationError  Some parameters may contain invalid values
    * @apiError (Unauthorized 401) Unauthorized Only authenticated users can modify the data
