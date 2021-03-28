@@ -19,20 +19,27 @@
 
 <script>
 import axios from 'axios';
+import router from '@/router/';
 
 export default {
-  name: 'Login',
+  name: 'Register',
   methods: {
     onRegister: (el) => {
       const username = el.target.username.value;
       const email = el.target.email.value;
       const password = el.target.password.value;
 
-      axios.post('sarpe.xyz/api/v1/register', {
+      const res = axios.post('https://www.sarpe.xyz/api/v1/auth/register', {
         username,
         email,
         password,
       });
+      const resParsed = JSON.parse(res);
+      console.log(resParsed);
+      if (resParsed.token) {
+        sessionStorage.setItem('session', res);
+        router.push('/');
+      }
     },
   },
 };
