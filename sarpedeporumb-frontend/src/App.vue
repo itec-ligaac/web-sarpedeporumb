@@ -9,6 +9,7 @@
             </label></li>
         </ul>
       </div>
+      <
       <ul class="dropdown menu" data-dropdown-menu>
         <li>
           <i class="fi-list" style="font-size:2.3em; margin-right:0.5em;"></i>
